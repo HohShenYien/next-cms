@@ -1,11 +1,14 @@
 import Logo from "@/components/branding/Logo";
+import { ActionIcon } from "@mantine/core";
 import Link from "next/link";
 import { IconType } from "react-icons";
-import { FaGithub, FaPhoneAlt } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 
 const socials: { Icon: IconType; link: string }[] = [
-  { Icon: FaGithub, link: "" },
+  { Icon: FaGithub, link: "https://github.com/HohShenYien/next-lms" },
+  { Icon: FaFacebook, link: "https://facebook.com" },
+  { Icon: FaLinkedin, link: "https://linkedin.com" },
 ];
 
 const Footer = () => {
@@ -18,7 +21,7 @@ const Footer = () => {
               <div className="flex items-center space-x-4">
                 <Logo size={48} />
                 <div className="text-3xl font-semibold text-white">
-                  Next CMS
+                  Next LMS
                 </div>
               </div>
               <div className="text-slate-400">
@@ -46,11 +49,11 @@ const Footer = () => {
                 <b className="text-white">Talk to Us</b>
                 <span className="flex space-x-2">
                   <GrMail className="text-slate-300" />
-                  <Link href="#">hello@next-cms.com</Link>
+                  <Link href="#">hello@next-lms.com</Link>
                 </span>
                 <span className="flex space-x-2">
                   <GrMail className="text-slate-300" />
-                  <Link href="#">support@next-cms.com</Link>
+                  <Link href="#">support@next-lms.com</Link>
                 </span>
                 <span className="flex space-x-2">
                   <FaPhoneAlt className="text-slate-300" />
@@ -69,9 +72,18 @@ const Footer = () => {
       <div className="flex justify-center px-12">
         <div className="flex max-w-6xl flex-1 justify-between py-4">
           <div className="text-slate-300">
-            @2023 Next CMS. No rights reserved.
+            @2023 Next LMS. No rights reserved.
           </div>
-          <div></div>
+          <div className="flex space-x-4">
+            {socials.map(({ Icon, link }, idx) => (
+              <Link key={idx} href={link}>
+                <Icon
+                  size="32"
+                  className="text-slate-400 transition-all hover:text-slate-300"
+                />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

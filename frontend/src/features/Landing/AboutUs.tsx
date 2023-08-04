@@ -57,7 +57,7 @@ const AboutUs = () => {
         <div className="mt-3 h-1.5 w-28 rounded-full bg-blue-600" />
         <div className="mt-4  text-slate-600">
           We are a group of online education advocates who came together to
-          build Next CMS using the Next Generation Technology. We were once
+          build Next LMS using the Next Generation Technology. We were once
           teachers like you too, and we know the pain of managing everything
           through pen and paper.
         </div>

@@ -38,7 +38,7 @@ const Navbar = () => {
         <Link href="/">
           <div className="flex items-center space-x-2">
             <Logo size={48} />
-            <p className="text-2xl font-bold text-blue-600">Next CMS</p>
+            <p className="text-2xl font-bold text-blue-600">Next LMS</p>
           </div>
         </Link>
         <div className="space-x-4">

@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="space-y-2 pr-6">
           <div className="">
             <p className="text-xl font-light">
-              Digitalize your education with Next CMS
+              Digitalize your education with Next LMS
             </p>
             <div className="-mt-2 text-8xl font-bold text-blue-700">
               Learn without limits.
