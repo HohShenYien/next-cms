@@ -1,3 +1,3 @@
-# next-cms
+# next-lms
 
-A CMS built with Next.js and next-power-starter
+A Learning Management System built with Next.js and [next-power-starter](https://github.com/HohShenYien/next-power-starter)https://github.com/HohShenYien/next-power-starter.
