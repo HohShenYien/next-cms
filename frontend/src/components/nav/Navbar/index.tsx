@@ -3,29 +3,14 @@ import Link from "next/link";
 import Logo from "../../branding/Logo";
 import { clsx } from "@mantine/core";
 import useNavStyles from "./useNavStyles";
-import openModal from "@/utils/modals/openModal";
-import { loginModal, registerModal } from "@/utils/modals/types";
-import { useRouter } from "next/router";
 import useSession from "@/features/Auth/hooks/useSession";
-import { authRedirectPath } from "@/configs/auth.config";
 import { useLogoutMutation } from "@/features/Auth/queries";
 
 const Navbar = () => {
   const navStyle = useNavStyles();
-  const router = useRouter();
   const { isLoading, mutate: logout } = useLogoutMutation();
 
   const { status } = useSession();
-  const authAction = (modal: typeof loginModal | typeof registerModal) => {
-    if (status === "authenticated") {
-      router.push(authRedirectPath);
-    } else {
-      openModal({
-        type: modal,
-        innerProps: {},
-      });
-    }
-  };
 
   return (
     <div
@@ -60,23 +45,14 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <Button
-                variant="subtle"
-                size="lg"
-                onClick={() => {
-                  authAction(loginModal);
-                }}
-              >
-                Sign in
-              </Button>
-              <Button
-                size="lg"
-                onClick={() => {
-                  authAction(registerModal);
-                }}
-              >
-                Register
-              </Button>
+              <Link href="/auth/login">
+                <Button variant="subtle" size="lg">
+                  Sign in
+                </Button>
+              </Link>
+              <Link href="/auth/register">
+                <Button size="lg">Register</Button>
+              </Link>
             </>
           )}
         </div>

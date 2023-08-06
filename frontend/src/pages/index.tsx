@@ -4,6 +4,7 @@ import Hero from "@/features/Landing/Hero";
 import Introduction from "@/features/Landing/Introduction";
 import WhatWeProvide from "@/features/Landing/WhatWeProvide";
 import Footer from "@/components/nav/Footer";
+import getHeroLayout from "@/layouts/HeroLayout";
 
 const Home: NextPageWithAttributes = () => {
   return (
@@ -18,4 +19,5 @@ const Home: NextPageWithAttributes = () => {
 };
 
 Home.isPublic = true;
+Home.getLayout = getHeroLayout;
 export default Home;

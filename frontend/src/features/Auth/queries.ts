@@ -2,7 +2,7 @@ import { apiClient } from "@/features/Auth/components/AxiosProvider";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { User } from "@/features/Auth/types";
 import { RegisterType } from "@/features/Auth/modals/RegisterModal";
-import { AuthType } from "@/features/Auth/modals/LoginModal";
+import { AuthType } from "@/features/Auth/modals/LoginForm";
 import { modals } from "@mantine/modals";
 import { useRouter } from "next/router";
 import {

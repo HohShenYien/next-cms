@@ -164,6 +164,13 @@ const tailwindColors: Record<
 const theme: MantineThemeOverride = {
   colors: tailwindColors,
   colorScheme: "light",
+  components: {
+    Input: {
+      classNames: {
+        input: "border-solid border-2 border-gray-400",
+      },
+    },
+  },
 };
 
 export default theme;

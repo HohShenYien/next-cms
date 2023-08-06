@@ -7,17 +7,9 @@ export const secondModal = "Second Modal";
 export const loginModal = "Login Modal";
 export const registerModal = "Register Modal";
 
-export type ModalType =
-  | typeof helloWorldModal
-  | typeof secondModal
-  | typeof loginModal
-  | typeof registerModal;
+export type ModalType = "";
 
-export type ModalInnerProps = {
-  [key in typeof helloWorldModal]: HelloWorldModalProps;
-} & {
-  [key in typeof secondModal | typeof registerModal | typeof loginModal]: {};
-};
+export type ModalInnerProps = {};
 
 export type MantineModal<P extends Record<string, any> = {}> = ((
   props: ContextModalProps<P>

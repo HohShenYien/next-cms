@@ -2,7 +2,7 @@ import "@/styles/globals.scss";
 import "@/styles/preflight.css";
 import type { AppProps } from "next/app";
 import { NextPage } from "next";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import Provider from "@/components/utils/Provider";
 import AuthGuard from "@/features/Auth/components/AuthGuard";
 import Meta from "@/components/utils/Meta";

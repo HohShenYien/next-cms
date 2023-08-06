@@ -1,10 +1,10 @@
 import { NextPageWithAttributes } from "@/pages/_app";
-import getDefaultLayout from "@/layouts/BaseLayout";
 import { useEffect } from "react";
 import useSession from "@/features/Auth/hooks/useSession";
 import { useRouter } from "next/router";
 import SplashScreen from "@/components/utils/SplashScreen";
 import { notifications } from "@mantine/notifications";
+import getDefaultLayout from "@/layouts/DefaultLayout";
 
 interface AuthGuardProps {
   Component: NextPageWithAttributes;
