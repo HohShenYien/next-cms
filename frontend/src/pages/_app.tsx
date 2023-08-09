@@ -6,6 +6,7 @@ import { ReactElement, useState } from "react";
 import Provider from "@/components/utils/Provider";
 import AuthGuard from "@/features/Auth/components/AuthGuard";
 import Meta from "@/components/utils/Meta";
+import dayjs from "dayjs";
 
 export type NextPageWithAttributes<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => JSX.Element;
