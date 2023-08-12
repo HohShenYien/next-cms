@@ -37,7 +37,7 @@ const WelcomeComponent = () => {
         <h3 className="text-xl font-semibold">Welcome back, Shen Yien!</h3>
         <div className="mb-2 mt-3 flex items-center space-x-2">
           <FcInfo size={24} />
-          <div>You still have some pending quizzes to complete</div>
+          <div>You still have some pending quizzes to complete this week</div>
         </div>
         <div className="space-y-1 pl-10">
           {pending.map((quiz) => (

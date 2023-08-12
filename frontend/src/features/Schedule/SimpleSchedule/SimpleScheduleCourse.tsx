@@ -27,11 +27,11 @@ const SimpleScheduleCourse = ({ schedule }: SimpleScheduleCourseProps) => {
       />
       <div>
         <div className="font-medium">{schedule.course.name}</div>
-        <div className="flex text-sm text-slate-500">
+        <div className="flex items-center text-sm text-slate-500">
           <AiOutlineClockCircle className="mr-1" />
           {schedule.time}
         </div>
-        <div className="flex text-sm text-slate-500">
+        <div className="flex items-center text-sm text-slate-500">
           <FiMapPin className="mr-1" />
           {schedule.venue}
         </div>

@@ -5,7 +5,7 @@ import { RxTriangleDown } from "react-icons/rx";
 
 const Appbar = () => {
   return (
-    <div className="fixed left-72 right-0 top-0 flex justify-center border-b-2 border-gray-200 bg-white px-4 py-3">
+    <div className="fixed left-72 right-0 top-0 z-20 flex justify-center border-b-2 border-gray-200 bg-white px-4 py-2">
       <div className="flex max-w-6xl flex-1">
         <div className="flex-1" />
         <Menu offset={2} width="target">
@@ -18,6 +18,7 @@ const Appbar = () => {
                   src="/random-image.jpg"
                   alt="it's me"
                   className="mr-2"
+                  size="md"
                 />
                 <div className="text-base">Shen Yien</div>
                 <RxTriangleDown size="24" />
